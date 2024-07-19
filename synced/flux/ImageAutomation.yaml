@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceRef: # moved from `.spec.checkout`
     kind: GitRepository
-    name: infra-config
+    name: gitopsrepo
   git:
     checkout:
       ref:

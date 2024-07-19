@@ -3,7 +3,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: flux-system
+  name: gitopsrepo
   namespace: flux-system
 spec:
   interval: 0m10s
@@ -24,4 +24,4 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: gitopsrepo
