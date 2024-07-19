@@ -10,7 +10,7 @@ spec:
   git:
     checkout:
       ref:
-        branch: rehease
+        branch: rehearse
     commit:
       author:
         email: fluxcdbot@elham.sa
