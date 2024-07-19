@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 0m10s
-  path: ./synched
+  path: ./synced
   prune: true
   sourceRef:
     kind: GitRepository

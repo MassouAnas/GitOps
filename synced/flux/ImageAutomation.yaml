@@ -25,4 +25,4 @@ spec:
   interval: 1m0s
   update:
     strategy: Setters
-    path: ./synched
+    path: ./synced
