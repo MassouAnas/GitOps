@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movies-backend
+spec:
+  selector:
+    matchLabels:
+      app: movies-backend
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: movies-backend
+    spec:
+      containers:
+        - name: movies-backend
+          image: random9deploy/movies-backend:32
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: movies-backend-configs
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
