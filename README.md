@@ -59,10 +59,11 @@ After forking this repo, follow the steps below to setup a working demo of FluxC
 
 - navigate to the backend directory in this repo.
 - There is a deployment, configmap and service example in the directory.
-- revise them and remember the folder, we are going to use it in the next steps.
+- revise them and remember the folder `synced/backend`, we are going to use it in the next steps.
 
 ### Flux Image Automation
 
+> Make sure to use the SAMPLES provided in `Samples` folder to create the resources
 We need to add few flux components to our cluster to enable image automation.
 
 after that fluxCD will be able to:
